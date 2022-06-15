@@ -2,8 +2,8 @@
     <div>
 
         <Header/>
-        <main class="container">
-            <!-- <div class="row justify-content-center">
+        <main>
+        <!-- <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
                     <Header></Header>
@@ -16,7 +16,7 @@
         </div> -->
 
             <div class="container">
-
+                <PostList/>
             </div>
         </main>
     </div>
@@ -24,11 +24,13 @@
 
 <script>
 import Header from './Header.vue'
+import PostList from './posts/PostList.vue'
 
 export default {
     name: "App",
     components: {
-        Header
+        Header,
+        PostList
     }
 }
 

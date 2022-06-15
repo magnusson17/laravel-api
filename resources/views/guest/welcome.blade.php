@@ -11,7 +11,7 @@
 
         <!-- Styles -->
         <style>
-            html, body {
+            /* html, body {
                 background-color: #fff;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
@@ -60,12 +60,15 @@
 
             .m-b-md {
                 margin-bottom: 30px;
-            }
+            } */
         </style>
+
+        {{-- importando file di stile da webpack.mix --}}
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
+            {{-- @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
@@ -77,7 +80,7 @@
                         @endif
                     @endauth
                 </div>
-            @endif
+            @endif --}}
 
             <div class="content">
                 {{-- in costruzione --}}
@@ -85,6 +88,10 @@
             </div>
         </div>
 
+
+        {{-- richiamare il js con dentro vue --}}
         <script src="{{ asset('js/front.js') }}"></script>
+        {{-- js compilato da webpack di bootsrap --}}
+        <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
